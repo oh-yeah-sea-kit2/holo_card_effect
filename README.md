@@ -1,39 +1,83 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# holo_card_effect
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+ホログラムカードのような光沢効果を実装するFlutterパッケージです。
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
+## 概要
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+このパッケージは、トレーディングカードやメンバーシップカードなどのUIに、美しいホログラム効果を簡単に実装できるようにします。デバイスの傾きに応じて変化する光沢効果により、リアルなホログラムカードの見た目を実現します。
 
-## Features
+## 特徴
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- 傾きに応じて変化するホログラム効果
+- カスタマイズ可能な光沢エフェクト
+- シンプルな実装で美しい視覚効果を実現
+- パフォーマンスを考慮した設計
 
-## Getting started
+## インストール
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+`pubspec.yaml`に以下を追加してください：
 
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
+```yaml
+dependencies:
+    holo_card_effect: ^0.0.1
 ```
 
-## Additional information
+## 使い方
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+基本的な使用例：
+
+```dart
+import 'package:holo_card_effect/holo_card_effect.dart';
+
+HoloCard(
+    imageUrl: 'assets/card_image.png',
+    width: 300,
+    height: 420,
+)
+```
+
+カスタマイズ例：
+
+```dart
+HoloCard(
+    imageUrl: 'assets/card_image.png',
+    width: 300,
+    height: 420,
+    showGlitter: true,
+    showHolo: true,
+    showRainbow: true,
+    showShadow: true,
+    showGloss: true,
+)
+```
+
+## プロパティ
+
+| プロパティ | 型 | デフォルト値 | 説明 |
+|------------|------|---------|------|
+| imageUrl | String | 必須 | カード画像のパス |
+| width | double | 300 | カードの幅 |
+| height | double | 420 | カードの高さ |
+| showGlitter | bool | true | キラキラエフェクトの表示 |
+| showHolo | bool | true | ホログラムエフェクトの表示 |
+| showRainbow | bool | true | 虹色エフェクトの表示 |
+| showShadow | bool | true | 影の表示 |
+| showGloss | bool | true | 光沢エフェクトの表示 |
+
+## 使用例
+
+トレーディングカード、会員証、チケットなど、様々なカード型UIに適用可能です：
+
+- コレクションカード
+- デジタルチケット
+- メンバーシップカード
+- ギフトカード
+など
+
+## デモ
+
+[デモ動画やGIFを追加予定]
+
+## 貢献
+
+バグ報告や機能リクエストは[GitHubのIssues](https://github.com/oh-yeah-sea-kit2/holo_card_effect/issues)にお願いします。
