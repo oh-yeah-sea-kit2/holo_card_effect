@@ -76,7 +76,7 @@ HoloCard(
 
 ## デモ
 
-[デモ動画やGIFを追加予定]
+https://github.com/user-attachments/assets/77740f38-d2b5-4ba1-8424-9a3f2d1a067a
 
 ## 貢献
 
